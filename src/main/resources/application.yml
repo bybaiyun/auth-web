@@ -1,0 +1,38 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demo
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: suragi
+      database: 0
+      jedis:
+        pool:
+          max-active: 20
+          max-idle: 300
+          max-wait: 1000
+          min-idle: 0
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: gswh2023fdzm
+    druid:
+      initial-size: 3
+      max-wait: 10
+      min-idle: 5
+
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.example.demo.dal.domain
+  configuration:
+    auto-mapping-behavior: full
+    cache-enabled: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    default-executor-type: simple
+    jdbc-type-for-null: other
+    lazy-load-trigger-methods: equals,clone,hashCode,toString
