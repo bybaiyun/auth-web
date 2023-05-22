@@ -22,6 +22,7 @@ spring:
       max-wait: 50
       min-idle: 5
       max-active: 100
+      #druid监控
       stat-view-servlet:
         enabled: true
         url-pattern: /druid/*
@@ -47,3 +48,5 @@ mybatis:
     default-executor-type: simple
     jdbc-type-for-null: other
     lazy-load-trigger-methods: equals,clone,hashCode,toString
+    #开启sql打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
