@@ -1,9 +1,9 @@
-package autoconfigure;
+package com.example.autoconfigure;
 
+import com.example.config.RedisConfig;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import config.RedisConfig;
 import jakarta.annotation.Resource;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
@@ -32,7 +32,7 @@ import java.time.Duration;
  */
 @Configuration
 @EnableCaching
-@DependsOn({"redisConfig"})
+@DependsOn("redisConfig")
 public class RedisConfiguration extends CachingConfigurerSupport {
     @Resource
     private RedisConfig redisConfig;

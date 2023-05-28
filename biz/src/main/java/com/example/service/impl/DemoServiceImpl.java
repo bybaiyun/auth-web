@@ -1,13 +1,13 @@
-package service.impl;
+package com.example.service.impl;
 
 
-import domain.Student;
+import com.example.domain.Student;
+import com.example.mapper.StudentMapper;
+import com.example.service.DemoService;
+import com.example.utils.RedisUtil;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import mapper.StudentMapper;
 import org.springframework.stereotype.Service;
-import service.DemoService;
-import utils.RedisUtil;
 
 import java.util.List;
 

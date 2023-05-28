@@ -1,11 +1,11 @@
-package controller;
+package com.example.controller;
 
+import com.example.service.DemoService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import service.DemoService;
 
 @Slf4j
 @RestController
@@ -14,7 +14,7 @@ public class DemoController {
     @Resource
     private DemoService demoService;
 
-    @GetMapping("/dbtest")
+    @GetMapping("/dbTest")
     public String dbTest(){
         return demoService.test();
     }

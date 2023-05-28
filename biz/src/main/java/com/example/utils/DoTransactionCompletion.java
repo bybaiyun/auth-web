@@ -1,4 +1,4 @@
-package utils;
+package com.example.utils;
 
 import org.springframework.transaction.support.TransactionSynchronization;
 

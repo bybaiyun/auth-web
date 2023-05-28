@@ -10,7 +10,6 @@ spring:
       password: suragi
       database: 0
       connect-timeout: 3
-
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
@@ -39,7 +38,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath*:/mapper/*.xml
-  type-aliases-package: com.example.demo.dal.domain
+  type-aliases-package: com.example.domain
   configuration:
     auto-mapping-behavior: full
     cache-enabled: true

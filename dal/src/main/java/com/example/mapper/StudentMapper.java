@@ -1,9 +1,8 @@
-package mapper;
+package com.example.mapper;
 
 
-import domain.Student;
+import com.example.domain.Student;
 import org.apache.ibatis.annotations.Mapper;
-
 import java.util.List;
 
 /**
@@ -17,16 +16,11 @@ public interface StudentMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Student record);
-
     int insertSelective(Student record);
 
     Student selectByPrimaryKey(Long id);
 
     List<Student> selectAllStudent();
 
-    int updateByPrimaryKeySelective(Student record);
-
-    int updateByPrimaryKey(Student record);
-
+    void updateByPrimaryKey(Student student);
 }

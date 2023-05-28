@@ -1,7 +1,8 @@
-package service;
+package com.example.service;
 
 
-import domain.Student;
+import com.example.domain.Student;
+
 import java.util.List;
 
 public interface DemoService {
