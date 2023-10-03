@@ -35,7 +35,21 @@ spring:
           merge-sql: true
       web-stat-filter:
         enabled: true
-
+  security:
+    oauth2:
+      client:
+        registration:
+          doLogin:
+            provider: spring
+            client-id: web-client
+            client-secret: secret
+            scope:
+              - openid
+            authorization-grant-type: authorization_code
+            redirect-uri: http://127.0.0.1:8080/api/user/get
+        provider:
+          spring:
+            issuer-uri: http://localhost:9000
 mybatis:
   mapper-locations: classpath*:/mapper/*.xml
   type-aliases-package: com.example.domain

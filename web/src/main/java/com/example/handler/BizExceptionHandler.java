@@ -1,4 +1,4 @@
-package handler;
+package com.example.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
